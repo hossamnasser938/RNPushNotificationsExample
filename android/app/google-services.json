@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "744488711259",
+    "firebase_url": "https://testpush-bef4c.firebaseio.com",
+    "project_id": "testpush-bef4c",
+    "storage_bucket": "testpush-bef4c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744488711259:android:39c4bd3b93b0d833983b7e",
+        "android_client_info": {
+          "package_name": "com.testpush"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "744488711259-etjkuqklmjn5epvlakkeqamrbrtrcfle.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2TdVGCFMSMOB2oHbU_OQLWKnMnRt66Vk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "744488711259-etjkuqklmjn5epvlakkeqamrbrtrcfle.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
