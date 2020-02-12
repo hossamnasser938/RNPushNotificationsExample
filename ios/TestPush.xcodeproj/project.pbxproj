@@ -19,6 +19,7 @@
 		79DC74485A75DF3C92816064 /* libPods-TestPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89E81D3282971E9EB7FD4B3A /* libPods-TestPush.a */; };
 		920D95B584E61357DE39B1CB /* libPods-TestPush-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C297972E3601DFB2FAD8F427 /* libPods-TestPush-tvOSTests.a */; };
 		92B1CD56225C989026AAA65C /* libPods-TestPushTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DB497FB52BDB5DFA2A1DCC5 /* libPods-TestPushTests.a */; };
+		9F027F8323F4B59000F3E764 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F027F8223F4B59000F3E764 /* GoogleService-Info.plist */; };
 		EED0B1AB1BF2F9D7781E9F50 /* libPods-TestPush-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A348F815DE190CE82A707D4B /* libPods-TestPush-tvOS.a */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,8 @@
 		9048B125C688796620CBA9F2 /* Pods-TestPush-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestPush-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-TestPush-tvOSTests/Pods-TestPush-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		9B0E7ECB22586E9AB531D198 /* Pods-TestPush.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestPush.debug.xcconfig"; path = "Target Support Files/Pods-TestPush/Pods-TestPush.debug.xcconfig"; sourceTree = "<group>"; };
 		9DB497FB52BDB5DFA2A1DCC5 /* libPods-TestPushTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestPushTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F027F8123F4B40200F3E764 /* TestPush.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = TestPush.entitlements; path = TestPush/TestPush.entitlements; sourceTree = "<group>"; };
+		9F027F8223F4B59000F3E764 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A348F815DE190CE82A707D4B /* libPods-TestPush-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestPush-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B87076C8C72A4629C09AC612 /* Pods-TestPushTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestPushTests.debug.xcconfig"; path = "Target Support Files/Pods-TestPushTests/Pods-TestPushTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C297972E3601DFB2FAD8F427 /* libPods-TestPush-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestPush-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +128,8 @@
 		13B07FAE1A68108700A75B9A /* TestPush */ = {
 			isa = PBXGroup;
 			children = (
+				9F027F8223F4B59000F3E764 /* GoogleService-Info.plist */,
+				9F027F8123F4B40200F3E764 /* TestPush.entitlements */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -194,7 +199,6 @@
 				B87076C8C72A4629C09AC612 /* Pods-TestPushTests.debug.xcconfig */,
 				089E3EE03BEFB665520E626A /* Pods-TestPushTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -292,6 +296,10 @@
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = W4MZD3C5HZ;
+						ProvisioningStyle = Manual;
+					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -308,6 +316,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -338,6 +347,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				9F027F8323F4B59000F3E764 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,8 +636,11 @@
 			baseConfigurationReference = 9B0E7ECB22586E9AB531D198 /* Pods-TestPush.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TestPush/TestPush.entitlements;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = W4MZD3C5HZ;
 				INFOPLIST_FILE = TestPush/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -635,8 +648,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.TTestPTushAAppp;
 				PRODUCT_NAME = TestPush;
+				PROVISIONING_PROFILE_SPECIFIER = "Test Push App Profile";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -646,7 +660,10 @@
 			baseConfigurationReference = 44A7F7D66E609CFA7EF24D73 /* Pods-TestPush.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TestPush/TestPush.entitlements;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W4MZD3C5HZ;
 				INFOPLIST_FILE = TestPush/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -654,8 +671,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.TTestPTushAAppp;
 				PRODUCT_NAME = TestPush;
+				PROVISIONING_PROFILE_SPECIFIER = "Test Push App Profile";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
